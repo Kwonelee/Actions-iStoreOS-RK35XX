@@ -7,6 +7,9 @@
 # Blog: https://p3terx.com
 #===============================================
 
+# Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
+sed -i 's/192.168.1.1/192.168.5.88/g' package/base-files/files/bin/config_generate
+
 # 删除引起iproute2依赖编译报错的补丁
 [ -e package/libs/elfutils/patches/999-fix-odd-build-oot-kmod-fail.patch ] && rm -f package/libs/elfutils/patches/999-fix-odd-build-oot-kmod-fail.patch
 
