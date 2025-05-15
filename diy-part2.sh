@@ -74,10 +74,10 @@ chmod 755 package/base-files/files/etc/init.d/opwifi
 
 
 # 集成CPU性能跑分脚本
-cp -a $GITHUB_WORKSPACE/configfiles/coremark/* package/base-files/files/bin/
-chmod 755 package/base-files/files/bin/coremark
-chmod 755 package/base-files/files/bin/coremark.sh
+# cp -a $GITHUB_WORKSPACE/configfiles/coremark/* package/base-files/files/bin/
+# chmod 755 package/base-files/files/bin/coremark
+# chmod 755 package/base-files/files/bin/coremark.sh
 
 
 # 定时限速插件
-git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+# git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
