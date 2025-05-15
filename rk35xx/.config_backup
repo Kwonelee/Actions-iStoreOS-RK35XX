@@ -1,20 +1,6 @@
 CONFIG_TARGET_rockchip=y
 CONFIG_TARGET_rockchip_rk35xx=y
 CONFIG_TARGET_MULTI_PROFILE=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_easepi_ars4=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_fastrhino_r6xs=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_firefly_station-p2=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_friendlyarm_nanopi-r5s=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_friendlyarm_nanopi-r6s=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_hinlink_h88k=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_hinlink_opc-h6xk=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_hlink_h28k=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_idiskk_h1=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_lyt_t68m=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_yyy_h1=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_jp_tvbox=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_panther_x2=y
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_dg_nas=y
 CONFIG_DEVEL=y
 CONFIG_BUSYBOX_CUSTOM=y
 CONFIG_ATH10K_LEDS=y
@@ -119,6 +105,7 @@ CONFIG_PACKAGE_comgt=y
 CONFIG_PACKAGE_comgt-directip=y
 CONFIG_PACKAGE_comgt-ncm=y
 CONFIG_PACKAGE_containerd=y
+CONFIG_PACKAGE_coreutils-stat=y
 CONFIG_PACKAGE_davfs2=y
 CONFIG_PACKAGE_dbus=y
 CONFIG_PACKAGE_ddns-scripts=y
@@ -146,7 +133,6 @@ CONFIG_PACKAGE_etherwake=y
 CONFIG_PACKAGE_fdisk=y
 CONFIG_PACKAGE_fdk-aac=y
 CONFIG_PACKAGE_ffmpeg-mpp=y
-CONFIG_PACKAGE_ffmpeg-remux=y
 CONFIG_PACKAGE_glib2=y
 CONFIG_PACKAGE_hostapd-common=y
 CONFIG_PACKAGE_hostapd-openssl=y
@@ -177,14 +163,7 @@ CONFIG_PACKAGE_kmod-ac97=y
 CONFIG_PACKAGE_kmod-aoe=y
 CONFIG_PACKAGE_kmod-asn1-decoder=y
 CONFIG_PACKAGE_kmod-ata-ahci=y
-CONFIG_PACKAGE_kmod-ata-artop=y
 CONFIG_PACKAGE_kmod-ata-core=y
-CONFIG_PACKAGE_kmod-ata-nvidia-sata=y
-CONFIG_PACKAGE_kmod-ata-pdc202xx-old=y
-CONFIG_PACKAGE_kmod-ata-piix=y
-CONFIG_PACKAGE_kmod-ata-sil=y
-CONFIG_PACKAGE_kmod-ata-sil24=y
-CONFIG_PACKAGE_kmod-ata-via-sata=y
 CONFIG_PACKAGE_kmod-ath=y
 CONFIG_PACKAGE_kmod-ath10k=y
 CONFIG_PACKAGE_kmod-ath6kl=y
@@ -194,6 +173,8 @@ CONFIG_PACKAGE_kmod-ath9k-common=y
 CONFIG_PACKAGE_kmod-ath9k-htc=y
 CONFIG_PACKAGE_kmod-atm=y
 CONFIG_PACKAGE_kmod-b43=y
+CONFIG_PACKAGE_kmod-backlight=y
+CONFIG_PACKAGE_kmod-backlight-gpio=y
 CONFIG_PACKAGE_kmod-bcma=y
 CONFIG_PACKAGE_kmod-block2mtd=y
 CONFIG_PACKAGE_kmod-bonding=y
@@ -246,6 +227,10 @@ CONFIG_PACKAGE_kmod-drm-kms-helper=y
 CONFIG_PACKAGE_kmod-drm-rockchip-rk35xx=y
 CONFIG_PACKAGE_kmod-drm-rockchip-rk35xx-hdmi-audio=y
 CONFIG_PACKAGE_kmod-drm-rockchip-rk35xx-hdmitx=y
+CONFIG_PACKAGE_kmod-drm-udl=y
+CONFIG_PACKAGE_kmod-dsa=m
+CONFIG_PACKAGE_kmod-dsa-mv88e6xxx=m
+CONFIG_PACKAGE_kmod-dsa-tag-dsa=m
 CONFIG_PACKAGE_kmod-dummy=y
 CONFIG_PACKAGE_kmod-e100=y
 CONFIG_PACKAGE_kmod-e1000=y
@@ -365,7 +350,6 @@ CONFIG_PACKAGE_kmod-lib-zlib-deflate=y
 CONFIG_PACKAGE_kmod-lib-zlib-inflate=y
 CONFIG_PACKAGE_kmod-lib-zstd=y
 CONFIG_PACKAGE_kmod-lib80211=y
-CONFIG_PACKAGE_kmod-libphy=y
 CONFIG_PACKAGE_kmod-loop=y
 CONFIG_PACKAGE_kmod-mac80211=y
 CONFIG_PACKAGE_kmod-macsec=y
@@ -431,6 +415,7 @@ CONFIG_PACKAGE_kmod-oaf=y
 CONFIG_PACKAGE_kmod-of-mdio=y
 CONFIG_PACKAGE_kmod-oid-registry=y
 CONFIG_PACKAGE_kmod-phy-ax88796b=y
+CONFIG_PACKAGE_kmod-phy-marvell=m
 CONFIG_PACKAGE_kmod-phy-realtek=y
 CONFIG_PACKAGE_kmod-phy-smsc=y
 CONFIG_PACKAGE_kmod-phylink=y
@@ -441,6 +426,7 @@ CONFIG_PACKAGE_kmod-pppol2tp=y
 CONFIG_PACKAGE_kmod-pps=y
 CONFIG_PACKAGE_kmod-pptp=y
 CONFIG_PACKAGE_kmod-ptp=y
+CONFIG_PACKAGE_kmod-r8126=y
 CONFIG_PACKAGE_kmod-r8169=m
 CONFIG_PACKAGE_kmod-random-core=y
 CONFIG_PACKAGE_kmod-regmap-core=y
@@ -464,8 +450,8 @@ CONFIG_PACKAGE_kmod-rtlwifi=y
 CONFIG_PACKAGE_kmod-rtlwifi-btcoexist=y
 CONFIG_PACKAGE_kmod-rtlwifi-pci=y
 CONFIG_PACKAGE_kmod-rtlwifi-usb=y
-CONFIG_PACKAGE_kmod-rtw88-oot=y
-CONFIG_PACKAGE_kmod-rtw89-oot=y
+CONFIG_PACKAGE_kmod-rtw88-oot=n
+CONFIG_PACKAGE_kmod-rtw89-oot=n
 CONFIG_PACKAGE_kmod-sched=y
 CONFIG_PACKAGE_kmod-sched-act-vlan=y
 CONFIG_PACKAGE_kmod-sched-bpf=y
@@ -487,9 +473,6 @@ CONFIG_PACKAGE_kmod-sound-soc-core=y
 CONFIG_PACKAGE_kmod-sound-soc-rockchip=y
 CONFIG_PACKAGE_kmod-spi-bitbang=m
 CONFIG_PACKAGE_kmod-ssb=y
-CONFIG_PACKAGE_kmod-swconfig=m
-CONFIG_PACKAGE_kmod-switch-rtl8366-smi=m
-CONFIG_PACKAGE_kmod-switch-rtl8367b=m
 CONFIG_PACKAGE_kmod-tpm=y
 CONFIG_PACKAGE_kmod-trelay=y
 CONFIG_PACKAGE_kmod-tun=y
@@ -586,6 +569,7 @@ CONFIG_PACKAGE_kmod-vxlan=y
 CONFIG_PACKAGE_kmod-wireguard=y
 CONFIG_PACKAGE_kmod-zram=y
 CONFIG_PACKAGE_lame-lib=y
+CONFIG_PACKAGE_lcdsimple=y
 CONFIG_PACKAGE_libatomic=y
 CONFIG_PACKAGE_libavahi-client=y
 CONFIG_PACKAGE_libavahi-dbus-support=y
@@ -602,6 +586,7 @@ CONFIG_PACKAGE_libexpat=y
 CONFIG_PACKAGE_libfdisk=y
 CONFIG_PACKAGE_libffi=y
 CONFIG_PACKAGE_libffmpeg-mpp=y
+CONFIG_PACKAGE_libfreetype=y
 CONFIG_PACKAGE_libfuse=y
 CONFIG_PACKAGE_libgcrypt=y
 CONFIG_PACKAGE_libgdbm=y
@@ -609,6 +594,7 @@ CONFIG_PACKAGE_libgmp=y
 CONFIG_PACKAGE_libgnutls=y
 CONFIG_PACKAGE_libgpg-error=y
 CONFIG_PACKAGE_libimobiledevice=y
+CONFIG_PACKAGE_libiperf3=y
 CONFIG_PACKAGE_libipset=y
 # CONFIG_PACKAGE_libiptext-nft is not set
 CONFIG_PACKAGE_libiwinfo=y
@@ -635,6 +621,7 @@ CONFIG_PACKAGE_libpci=y
 CONFIG_PACKAGE_libpcre=y
 CONFIG_PACKAGE_libpcre2=y
 CONFIG_PACKAGE_libplist=y
+CONFIG_PACKAGE_libpng=y
 CONFIG_PACKAGE_libpopt=y
 CONFIG_PACKAGE_libqmi=y
 CONFIG_PACKAGE_libqrtr-glib=y
@@ -658,6 +645,7 @@ CONFIG_PACKAGE_libwrap=y
 CONFIG_PACKAGE_libx264=y
 CONFIG_PACKAGE_libxml2=y
 CONFIG_PACKAGE_linkease=y
+CONFIG_PACKAGE_linkmount=y
 CONFIG_PACKAGE_lm-sensors=y
 CONFIG_PACKAGE_lm-sensors-detect=y
 CONFIG_PACKAGE_losetup=y
@@ -782,6 +770,7 @@ CONFIG_PACKAGE_relayd=y
 CONFIG_PACKAGE_rkmpp=y
 CONFIG_PACKAGE_rkrga=y
 CONFIG_PACKAGE_rkwifi-firmware=m
+CONFIG_PACKAGE_rkwifi-firmware-ap6255=m
 CONFIG_PACKAGE_rkwifi-firmware-ap6256=m
 CONFIG_PACKAGE_rkwifi-firmware-ap6275p=m
 CONFIG_PACKAGE_rkwifi-firmware-ap6275s=m
@@ -790,18 +779,18 @@ CONFIG_PACKAGE_rpcbind=y
 CONFIG_PACKAGE_rpcd-mod-iwinfo=y
 CONFIG_PACKAGE_rpcd-mod-rrdns=y
 CONFIG_PACKAGE_rs9113-firmware=y
-CONFIG_PACKAGE_rtl8192cu-firmware=y
-CONFIG_PACKAGE_rtl8192de-firmware=y
-CONFIG_PACKAGE_rtl8192se-firmware=y
-CONFIG_PACKAGE_rtl8723du-firmware=y
-CONFIG_PACKAGE_rtl8821ae-firmware=y
-CONFIG_PACKAGE_rtl8821ce-firmware=y
-CONFIG_PACKAGE_rtl8822be-firmware=y
-CONFIG_PACKAGE_rtl8822ce-firmware=y
-CONFIG_PACKAGE_rtl8851be-firmware=y
-CONFIG_PACKAGE_rtl8852ae-firmware=y
-CONFIG_PACKAGE_rtl8852be-firmware=y
-CONFIG_PACKAGE_rtl8852ce-firmware=y
+CONFIG_PACKAGE_rtl8192cu-firmware=n
+CONFIG_PACKAGE_rtl8192de-firmware=n
+CONFIG_PACKAGE_rtl8192se-firmware=n
+CONFIG_PACKAGE_rtl8723du-firmware=n
+CONFIG_PACKAGE_rtl8821ae-firmware=n
+CONFIG_PACKAGE_rtl8821ce-firmware=n
+CONFIG_PACKAGE_rtl8822be-firmware=n
+CONFIG_PACKAGE_rtl8822ce-firmware=n
+CONFIG_PACKAGE_rtl8851be-firmware=n
+CONFIG_PACKAGE_rtl8852ae-firmware=n
+CONFIG_PACKAGE_rtl8852be-firmware=n
+CONFIG_PACKAGE_rtl8852ce-firmware=n
 CONFIG_PACKAGE_runc=y
 CONFIG_PACKAGE_samba4-libs=y
 CONFIG_PACKAGE_samba4-server=y
@@ -845,7 +834,6 @@ CONFIG_PACKAGE_smartd=y
 CONFIG_PACKAGE_smartmontools=y
 CONFIG_PACKAGE_strace=y
 CONFIG_PACKAGE_swap-utils=y
-CONFIG_PACKAGE_swconfig=m
 CONFIG_PACKAGE_sysfsutils=y
 CONFIG_PACKAGE_sysstat=y
 CONFIG_PACKAGE_tcpdump=y
@@ -901,16 +889,83 @@ CONFIG_WPA_MSG_MIN_PRIORITY=3
 CONFIG_shadow-all=y
 # CONFIG_LIBMBEDTLS_DEBUG_C is not set
 # CONFIG_LIBMBEDTLS_HKDF_C is not set
+# CONFIG_PACKAGE_kmod-leds-pwm is not set
 CONFIG_PACKAGE_libmbedtls=y
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_armsom_sige1 is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_armsom_sige7-v1 is not set
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_cyber3588_aib is not set
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_dg_nas-lite is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_fastrhino_r66s is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_fastrhino_r68s is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_hinlink_hnas is not set
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_idiskk_h1 is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_inspur_ihec301 is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_jsy_h1 is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_le_hes30 is not set
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_roc_k50s is not set
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_yijiahe_jm10 is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_ynn_ynnnas is not set
-# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_mangopi_m28k is not set
-# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_nlnet_xgp is not set
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_yyy_h1 is not set
 # CONFIG_VERSION_CODE_FILENAMES is not set
 # CONFIG_VERSION_FILENAMES is not set
+
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_mangopi_m28k is not set
+# CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_nlnet_xgp is not set
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_easepi_ars4=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_fastrhino_r6xs=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_firefly_station-p2=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_friendlyarm_nanopi-r5s=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_friendlyarm_nanopi-r6s=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_hinlink_h88k=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_hinlink_opc-h6xk=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_hlink_h28k=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_idiskk_h1=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_lyt_t68m=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_yyy_h1=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_jp_tvbox=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_panther_x2=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_dg_nas-lite=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_ezpro_mrkaio-m68s=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_ezpro_mrkaio-m68s-plus=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_dg_tn3568=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_yijiahe_jm10=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_cyber3588_aib=y
+CONFIG_PACKAGE_brcmfmac-firmware-panther-x2=y
+CONFIG_PACKAGE_brcmfmac-firmware-jp-tvbox=y
+CONFIG_PACKAGE_kmod-nft-tproxy=y
+# CONFIG_PACKAGE_kmod-usb-printer is not set
+# CONFIG_PACKAGE_luci-app-usb-printer is not set
+# CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn is not set
+# CONFIG_PACKAGE_hd-idle is not set
+# CONFIG_PACKAGE_luci-app-hd-idle is not set
+# CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn is not set
+CONFIG_PACKAGE_luci-app-filebrowser=y
+CONFIG_PACKAGE_luci-i18n-filebrowser-zh-cn=y
+# CONFIG_PACKAGE_sendat is not set
+# CONFIG_PACKAGE_sms-tool is not set
+# CONFIG_PACKAGE_meig-cm is not set
+# CONFIG_PACKAGE_quectel-CM-5G is not set
+# CONFIG_PACKAGE_kmod-pcie_mhi is not set
+# CONFIG_PACKAGE_kmod-gobinet is not set
+# CONFIG_PACKAGE_kmod-qmi_wwan_q is not set
+# CONFIG_PACKAGE_kmod-qmi_wwan_m is not set
+# CONFIG_PACKAGE_luci-app-modem is not set
+# CONFIG_PACKAGE_luci-i18n-modem-zh-cn is not set
+# CONFIG_PACKAGE_luci-app-sms-tool is not set
+CONFIG_PACKAGE_nginx=y
+CONFIG_PACKAGE_nginx-ssl=y
+CONFIG_PACKAGE_nginx-ssl-util=y
+CONFIG_PACKAGE_nginx-util=y
+CONFIG_PACKAGE_nginx-mod-luci=y
+CONFIG_PACKAGE_luci-nginx=y
+CONFIG_PACKAGE_jq=y
+CONFIG_PACKAGE_ntpdate=y
+CONFIG_PACKAGE_hdparm=y
+CONFIG_PACKAGE_stress=y
+CONFIG_PACKAGE_coreutils=y
+CONFIG_PACKAGE_coreutils-base64=y
+CONFIG_PACKAGE_coreutils-stty=y
+CONFIG_PACKAGE_coreutils-nohup=y
+CONFIG_PACKAGE_luci-app-store=y
+# CONFIG_PACKAGE_luci-app-eqosplus is not set
+# CONFIG_PACKAGE_luci-i18n-eqosplus-zh-cn is not set
