@@ -18,4 +18,4 @@ echo $date_version > version
 
 # 拉取我的软件包仓库
 echo 'src-git xmpackages https://github.com/xiaomeng9597/openwrt-packages2.git;main' >> feeds.conf.default
-echo 'src-git ramfree https://github.com/sbwml/luci-app-ramfree' >>feeds.conf.default
+echo 'src-git ramfree https://github.com/sbwml/luci-app-ramfree.git;main' >> feeds.conf.default
