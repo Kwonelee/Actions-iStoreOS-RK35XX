@@ -17,4 +17,4 @@ echo $date_version > version
 # sed -i "s/OPENWRT_RELEASE.*/OPENWRT_RELEASE=\"%D %V ${date_version} by ${author}\"/g" package/base-files/files/usr/lib/os-release
 
 # 拉取我的软件包仓库
-echo 'src-git xmpackages https://github.com/xiaomeng9597/openwrt-packages2.git;main' >> feeds.conf.default
+echo 'src-git xmpackages https://github.com/Kwonelee/openwrt-packages2.git;main' >> feeds.conf.default
