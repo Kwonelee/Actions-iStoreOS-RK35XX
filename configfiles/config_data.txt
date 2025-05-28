@@ -1,19 +1,1 @@
-CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_firefly_station-m2=y
 
-CONFIG_PACKAGE_luci-app-ramfree=y
-CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
-
-CONFIG_PACKAGE_luci-app-filebrowser=y
-CONFIG_PACKAGE_luci-i18n-filebrowser-zh-cn=y
-
-# CONFIG_PACKAGE_ddnsto is not set
-# CONFIG_PACKAGE_luci-app-ddnsto is not set
-# CONFIG_PACKAGE_luci-i18n-ddnsto-zh-cn is not set
-
-# CONFIG_PACKAGE_linkease is not set
-# CONFIG_PACKAGE_luci-app-linkease is not set
-# CONFIG_PACKAGE_luci-i18n-linkease-zh-cn is not set
-
-# CONFIG_PACKAGE_etherwake is not set
-# CONFIG_PACKAGE_luci-app-wol is not set
-# CONFIG_PACKAGE_luci-i18n-wol-zh-cn is not set
